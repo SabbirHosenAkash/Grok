@@ -1,0 +1,35 @@
+/* Tailwind base + custom overrides */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00ff88;
+  --accent: #ff3366;
+}
+
+body.dark {
+  @apply bg-gray-950 text-white;
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* 3D card hover */
+.interactive-box {
+  @apply transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-2xl hover:shadow-primary/20;
+  transform-style: preserve-3d;
+}
+
+/* Skill bars */
+.fill-3d {
+  @apply h-full bg-gradient-to-r from-primary to-blue-500 rounded-full transition-all duration-1500;
+}
+
+/* ... বাকি custom styles আগের মতো রাখা + Tailwind-এর সাথে মার্জ ... */
